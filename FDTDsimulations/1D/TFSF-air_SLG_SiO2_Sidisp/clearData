@@ -1,0 +1,2 @@
+rm -rf transforms/*.dat
+rm -rf timesLine/*.png timesLine/*.png

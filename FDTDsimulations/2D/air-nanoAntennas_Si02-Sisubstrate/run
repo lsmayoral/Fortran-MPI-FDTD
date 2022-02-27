@@ -1,0 +1,4 @@
+PID=$(sbatch mpi_job.slrm | tr -dc '0-9')
+echo "scancel $PID">cancel
+
+echo "PID=$PID"

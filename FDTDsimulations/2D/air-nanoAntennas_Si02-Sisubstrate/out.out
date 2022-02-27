@@ -1,0 +1,39 @@
+ absRange:   0     1   125     1   422
+ locRange:   0     1   125    10   422
+ absRange:   1     1   125   423   844
+ locRange:   1     1   125     1   422
+ absRange:   2     1   125   845  1266
+ locRange:   2     1   125     1   412
+ sigmam=   2.3989393988497120E+017
+ npmls=          10          10
+ Nx=         125 Ny=        1266
+ N_x=         125 N_y=         422
+ ds=   3.9990000000000008E-009
+ dt=   6.6696140834870513E-018
+ dn=         684
+ Nt=       13696
+ Nt/dn=          20
+ R0=   1.1253517471925912E-007
+ lambda0=   6.3300000000000002E-007         158
+ lambda1=   1.6314432989690722E-007          40
+ source_sposy=          12
+ Au:xi          50 Au:xf          74
+ Au:yi        1008 Au:yf        1012
+ Si:xi           1 Si:xf         125
+ Si:yi        1084 Si:yf        1256
+ Si:ep   15.054399999999999        3.8799999999999999     
+ air:xi           1 air:xf         125
+ air:yi          10 air:yf        1012
+ air:ep   1.0000000000000000        1.0000000000000000     
+ time4incident=   2.2840801418693465E-014
+ distance4incident=   6.8475000000000009E-006
+ vel4incident=   299792458.00000000        1.0000000000000000     
+ tfinStop=        3424
+ xBDlow=          10 xBDhigh=         116
+ yBDlow=          10 yBDhigh=         413
+ ic=          62 jc=         633
+ i_c=          62 j_c=         211
+ ptiny=          14 ptry=          14 ptty=        1170
+ source:           0
+ TFt: myrank=           2         326
+ TFin: myrank=           0          14

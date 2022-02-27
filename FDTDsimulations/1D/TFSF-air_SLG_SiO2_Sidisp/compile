@@ -1,0 +1,24 @@
+#!/bin/bash
+
+FC=mpifort
+program=program
+exe=run$program
+moddir=/home/lmayoral/programs/ACRuO/modules/current/modules/obj
+mod1D=$moddir/1D
+modmisc=$moddir/misc
+
+
+includes="-I$mod1D -I$modmisc"
+
+modmiscFiles="$modmisc/*.o"
+mod1DFiles="$mod1D/*.o"
+
+modfiles="$modmiscFiles $mod1DFiles"
+
+
+
+$FC $check $archSec -c $program.f90 $includes
+$FC $check $archSec -o $exe $program.o $includes $modfiles
+echo "src=$program.f90"
+echo "exe=$exe"
+

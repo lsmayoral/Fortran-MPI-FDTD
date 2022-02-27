@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="Fortran XML parser for poor people">
+    
+    <meta name="author" content="Fortran-FOSS-Programmers Group" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>stringifor_string_t &ndash; FoXy</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">FoXy </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../lists/programs.html">Programs</a></li>
+        
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>stringifor_string_t 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title="40.2% of total for modules and submodules.">1911 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/stringifor_string_t.F90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/stringifor_string_t.f90.html'>stringifor_string_t.F90</a></li>
+    
+  
+     <li class="active">stringifor_string_t</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#variable-ck">CK</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#type-string">string</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sadjustl_character">sadjustl_character</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sadjustr_character">sadjustr_character</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sindex_string_string">sindex_string_string</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sindex_string_character">sindex_string_character</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sindex_character_string">sindex_character_string</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-slen">slen</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-slen_trim">slen_trim</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-srepeat_string_string">srepeat_string_string</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sscan_string_string">sscan_string_string</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sscan_string_character">sscan_string_character</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sscan_character_string">sscan_character_string</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-strim">strim</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href="http://fortranwiki.org/fortran/show/ISO_FORTRAN_ENV">iso_fortran_env</a></li>
+    
+    <li><a href='../module/befor64.html'>befor64</a></li>
+    
+    <li><a href='../module/penf.html'>penf</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#variable-ck">CK</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#type-string">string</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sadjustl_character">sadjustl_character</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sadjustr_character">sadjustr_character</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sindex_string_string">sindex_string_string</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sindex_string_character">sindex_string_character</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sindex_character_string">sindex_character_string</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-slen">slen</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-slen_trim">slen_trim</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-srepeat_string_string">srepeat_string_string</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sscan_string_string">sscan_string_string</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sscan_string_character">sscan_string_character</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-sscan_character_string">sscan_character_string</a>
+      
+      <a class="list-group-item" href="../module/stringifor_string_t.html#proc-strim">strim</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ck"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>CK</strong></td><td> =</td><td>selected_char_kind('DEFAULT')</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <section>
+     <h2>Derived Types</h2>
+   
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-string"></span><h3>type, public :: <a href='../type/string.html'>string</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     
+          
+     
+     <h4>Type-Bound Procedures</h4>
+      <table class="table table-striped varlist">
+      <tbody>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-adjustl'>adjustl</a></strong>  => sadjustl </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-adjustr'>adjustr</a></strong>  => sadjustr </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-count'>count</a></strong>  => scount </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-index'>index</a></strong>  => sindex_string_string, sindex_string_character </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-len'>len</a></strong>  => slen </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-len_trim'>len_trim</a></strong>  => slen_trim </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-repeat'>repeat</a></strong>  => srepeat_string_string, srepeat_character_string </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-scan'>scan</a></strong>  => sscan_string_string, sscan_string_character </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-trim'>trim</a></strong>  => strim </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-verify'>verify</a></strong>  => sverify </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-basedir'>basedir</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-basename'>basename</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-camelcase'>camelcase</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-capitalize'>capitalize</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-chars'>chars</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-decode'>decode</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-encode'>encode</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-escape'>escape</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-extension'>extension</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-fill'>fill</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-free~3'>free</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-glob'>glob</a></strong>  => glob_character, glob_string </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-insert'>insert</a></strong>  => insert_string, insert_character </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-join'>join</a></strong>  => join_strings, join_characters </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-lower'>lower</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-partition'>partition</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-read_file'>read_file</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-read_line'>read_line</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-read_lines'>read_lines</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-replace'>replace</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-reverse'>reverse</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-search'>search</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-slice'>slice</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-snakecase'>snakecase</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-split'>split</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-split_chunked'>split_chunked</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-startcase'>startcase</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-strip'>strip</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-swapcase'>swapcase</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-tempname'>tempname</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-to_number'>to_number</a></strong>  => to_integer_I1P, to_integer_I2P, to_integer_I4P, to_integer_I8P, to_real_R4P, to_real_R8P </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-unescape'>unescape</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-unique'>unique</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-upper'>upper</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-write_file'>write_file</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-write_line'>write_line</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-write_lines'>write_lines</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-end_with'>end_with</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-is_allocated'>is_allocated</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-is_digit'>is_digit</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-is_integer'>is_integer</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-is_lower'>is_lower</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-is_number'>is_number</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-is_real'>is_real</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-is_upper'>is_upper</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public, pass(self) :: <strong><a href='../type/string.html#boundprocedure-start_with'>start_with</a></strong>  </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-assignment%28%3D%29~2'>assignment(=)</a></strong>  => string_assign_string, string_assign_character, string_assign_integer_I1P, string_assign_integer_I2P, string_assign_integer_I4P, string_assign_integer_I8P, string_assign_real_R4P, string_assign_real_R8P </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-operator%28SLASHSLASH%29'>operator(//)</a></strong>  => string_concat_string, string_concat_character, character_concat_string </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-operator%28.cat.%29'>operator(.cat.)</a></strong>  => string_concat_string_string, string_concat_character_string, character_concat_string_string </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-operator%28%3D%3D%29'>operator(==)</a></strong>  => string_eq_string, string_eq_character, character_eq_string </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-operator%28SLASH%3D%29'>operator(/=)</a></strong>  => string_ne_string, string_ne_character, character_ne_string </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-operator%28lt%29'>operator(<)</a></strong>  => string_lt_string, string_lt_character, character_lt_string </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-operator%28lt%3D%29'>operator(<=)</a></strong>  => string_le_string, string_le_character, character_le_string </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-operator%28gt%3D%29'>operator(>=)</a></strong>  => string_ge_string, string_ge_character, character_ge_string </td>
+       <td></td></tr>
+      
+       <tr><td>generic, public :: <strong><a href='../type/string.html#boundprocedure-operator%28gt%29'>operator(>)</a></strong>  => string_gt_string, string_gt_character, character_gt_string </td>
+       <td></td></tr>
+      
+       </tbody>
+       </table>
+     
+  </div>
+</div>
+
+     
+    </section>
+  <br>
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sadjustl_character"></span><h3>
+public pure function <a href='../proc/sadjustl_character.html'>sadjustl_character</a>(self) result(adjusted)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(kind=CK,len=:),
+  allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sadjustr_character"></span><h3>
+public pure function <a href='../proc/sadjustr_character.html'>sadjustr_character</a>(self) result(adjusted)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>character(kind=CK,len=:),
+  allocatable</small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sindex_string_string"></span><h3>
+public elemental function <a href='../proc/sindex_string_string.html'>sindex_string_string</a>(self, substring, back) result(i)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>substring</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>back</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sindex_string_character"></span><h3>
+public elemental function <a href='../proc/sindex_string_character.html'>sindex_string_character</a>(self, substring, back) result(i)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(kind=CK,len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>substring</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>back</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sindex_character_string"></span><h3>
+public elemental function <a href='../proc/sindex_character_string.html'>sindex_character_string</a>(string_, substring, back) result(i)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(kind=CK,len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string_</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>substring</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>back</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-slen"></span><h3>
+public elemental function <a href='../proc/slen.html'>slen</a>(self) result(l)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-slen_trim"></span><h3>
+public elemental function <a href='../proc/slen_trim.html'>slen_trim</a>(self) result(l)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-srepeat_string_string"></span><h3>
+public elemental function <a href='../proc/srepeat_string_string.html'>srepeat_string_string</a>(self, ncopies) result(repeated)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ncopies</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(<a href='../type/string.html'>string</a>)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sscan_string_string"></span><h3>
+public elemental function <a href='../proc/sscan_string_string.html'>sscan_string_string</a>(self, set, back) result(i)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>set</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>back</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sscan_string_character"></span><h3>
+public elemental function <a href='../proc/sscan_string_character.html'>sscan_string_character</a>(self, set, back) result(i)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(kind=CK,len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>set</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>back</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-sscan_character_string"></span><h3>
+public elemental function <a href='../proc/sscan_character_string.html'>sscan_character_string</a>(sstring, set, back) result(i)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(kind=CK,len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sstring</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>set</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>back</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-strim"></span><h3>
+public elemental function <a href='../proc/strim.html'>strim</a>(self) result(trimmed)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/string.html'>string</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>type(<a href='../type/string.html'>string</a>)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> FoXy was developed by Fortran-FOSS-Programmers Group</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

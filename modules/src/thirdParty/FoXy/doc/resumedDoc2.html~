@@ -1,0 +1,89 @@
+<ul>
+	<li><h2>type, public:: xml_file</h2></li>
+
+<!--                                                   -->
+		<table border align="center" width="100%" frame="border" rules="border">
+		<th bgcolor="#AFEEEE">subroutine :: free()</th>
+		<tr><td align="center">Free dynamic memory.</td></tr>
+		</table>
+<br><br>
+
+<!--                                                   -->
+		<table border align="center" width="100%" frame="border" rules="border">
+		<th bgcolor="#AFEEEE" colspan="2">subroutine :: parse(string, filename)</th>
+		<tr>
+			<td align="right">self(inout):&nbsp;&nbsp;</td>
+			<td align="left">XML file class.</td>
+		</tr>
+		<tr>
+			<td align="right">string(in):&nbsp;&nbsp;</td>
+			<td align="left">String containing xml data.</td>
+		</tr>
+		<tr >
+			<td align="right">filename(in):&nbsp;&nbsp;</td>
+			<td align="left">File name containing xml data</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><hr> 
+			Parse xml data from string or file.<br>
+				Note Self data are free before trying to parse new xml data: all previously parsed data are lost.
+			</td>
+		</tr>
+		</table><br><br>
+
+	
+<!--                                                   -->
+		<table border align="center" width="100%" frame="border" rules="border">
+		<th bgcolor="#AFEEEE" colspan="2">
+		function :: content(name) result(string)
+		</th>
+
+		<tr>
+			<td align="right">
+				name(in):&nbsp;&nbsp;
+			</td>
+			<td align="left">
+			 	Tag name.
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2" align="center"><hr> 
+			Return tag content of tag named *name*. <br>
+		Note If there is no value, the *tag_content* string is returned empty, but allocated.
+			</td>
+		</tr>
+		</table><br><br>
+
+<!--                                                   -->
+		<table border align="center" width="100%" frame="border" rules="border">
+		<th bgcolor="#AFEEEE" colspan="2">
+		</th>
+
+		<tr>
+			<td align="right">
+			&nbsp;&nbsp;</td>
+			<td align="left">
+			</td></td>
+		</tr>
+
+		<tr>
+			<td colspan="2" align="center"><hr> 
+			</td>
+		</tr>
+		</table><br><br>
+
+<!--                                                   -->
+		<table border align="center" width="100%" frame="border" rules="border">
+		<th bgcolor="#AFEEEE" colspan="2">
+		</th>
+			function :: stringify() result(string)
+		<tr>
+			<td colspan="2" align="center"><hr>
+			Convert the whole file data into a string. 
+			</td>
+		</tr>
+		</table><br><br>
+
+	<li><h2>type :: xml_tag</h2></li>
+</ul>

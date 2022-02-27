@@ -1,0 +1,12 @@
+#!/bin/sh
+rm -rf *.dat
+rm -rf *.png
+rm -rf timesLiney/*.dat
+rm -rf timesGnuplotmap/*.dat 
+rm -rf timesGnuplotmap/*.png
+rm -rf timesLiney/*.dat timesLiney/*.png
+rm -rf transforms/*.dat
+rm -rf material/*.dat material/*.png
+rm -rf timesVTK/*.vtk timesVTK/*.vtm timesVTK/*.vts
+rm -rf parameters/*.vtk
+

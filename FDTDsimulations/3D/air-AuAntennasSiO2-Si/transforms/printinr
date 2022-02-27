@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+gnuplot -persist<< EOF
+reset
+
+#set terminal postscript eps enhanced size 8.5cm,6cm color font "Times,20" linewidth 10
+#set terminal png large size 1600,720 enhanced
+
+set multiplot layout 3,1
+set xlabel "time (s)" 
+set ylabel "Ex" 
+
+set title "WITH time filter"
+
+plot [:][:]\\
+"r0infld.dat" u 1:2 w l lw 2 title "in",\\
+"r0rfld.dat" u 1:2 w l  lt 6 lw 1 title "r"
+plot [:][:]\\
+"r5tfld.dat" u 1:2 w l  lt 7 lw 1 title "t"
+
+plot [4.5e-14:][:]\\
+"r0rfld.dat" u 1:2 w l  lt 6 lw 1 title "r",\\
+"r2tfld.dat" u 1:2 w l  lt 7 lw 1 title "t"
+
+EOF
+

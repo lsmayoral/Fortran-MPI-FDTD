@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+gnuplot -persist<< EOF
+reset
+
+set title "Ex field at pt-in and pt-r"
+set multiplot layout 2,1
+set xlabel "time (s)" 
+set ylabel "Ex" 
+
+
+plot [:][:]\\
+"r0infld.dat" u 1:2 w l title "in"
+plot [:][:]\\
+"r0rfld.dat" u 1:2 w l lt 7 title "r"
+
+EOF
+

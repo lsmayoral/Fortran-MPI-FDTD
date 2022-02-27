@@ -1,0 +1,76 @@
+ locRange: 0    11  3251
+ absRange: 0     1  3251
+ locRange: 1     1  3251
+ absRange: 1  3252  6502
+ locRange: 3     1  3241
+ locRange: 2     1  3251
+ absRange: 2  6503  9753
+ absRange: 3  9754 13004
+ c0=   299792458.00000000        2.9979245799999998     
+ lambda0=   6.3300000000000002E-007   633.00000000000000      nm         633 cells
+ f0=   473605778830963.62        6.3300000000000002E-007
+ w0=   2975752870946055.5        6.3300000000000002E-007
+ sigmam=   9.5933586560000000E+017
+ npml=          10
+ Npos=       13004
+ N_pos=        3251
+ ds=   1.0000000000000001E-009
+ dt=   3.3022845424617055E-018
+ dn=        2737
+ Nt=       54747
+ Nt/dn=          20
+ source_spos=          20
+ air:posi          11 air:posf       12670
+ air:ep   1.0000000000000000        1.0000000000000000     
+ SiO2:posi       12671 SiO2:posf       12954
+ SiO2:ep   2.1315999999999997        1.4600000000000000     
+ Si:posi       12955 Si:posf       12994
+ Si:ep   14.227983999999999        3.7719999999999998     
+ time4incident=   2.1688337469783847E-014
+ distance4incident=   6.5020000000000006E-006
+ vel4incident=   299792458.00000000        1.0000000000000000     
+ tfinStop=        6567
+ yBDlow=          10 yBDhigh=        3242
+ monitor_pti=          20 monitor_ptr=          30
+ spos=          20
+ TFSF_bd=          25
+ starting E interchange           0
+ starting E interchange           3
+ SendE_b           3
+ RecvE_f           3
+ starting E interchange           2
+ SendE_b           2
+ RecvE_b           2
+ starting E interchange           1
+ SendE_b           1
+ RecvE_b           1
+ RecvE_f           2
+ RecvE_f           1
+ RecvE_b           0
+ SendE_f           0
+ SendE_f           1
+ SendE_f           2
+ starting E interchange           1
+ SendE_b           1
+ RecvE_b           1
+ RecvE_f           1
+ starting E interchange           2
+ SendE_b           2
+ RecvE_b           2
+ RecvE_f           2
+ starting E interchange           0
+ starting E interchange           3
+ SendE_b           3
+ RecvE_f           3
+ RecvE_b           0
+ SendE_f           0
+ SendE_f           2
+ SendE_f           1
+ starting H interchange           2
+ starting H interchange           1
+ starting H interchange           3
+ starting H interchange           0
+ starting H interchange           1
+ starting H interchange           2
+ starting H interchange           0
+ starting H interchange           3

@@ -1,0 +1,7 @@
+#!/bin/bash
+#sh clear.sh 40
+#check="-fcheck=all"
+
+dest="../../obj/3D/"
+rm -rf $dest/*.o
+rm -rf $dest/*.mod

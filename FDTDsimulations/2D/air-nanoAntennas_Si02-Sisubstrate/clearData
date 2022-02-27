@@ -1,0 +1,13 @@
+rm -rf *.dat
+rm -rf *.png
+rm -rf timesGnuplotmap/*.dat 
+rm -rf timesGnuplotmap/*.png
+rm -rf timesLiney/*.dat timesLiney/*.png
+rm -rf timeTf/*.dat timeTf/*.png
+rm -rf transforms/*.dat
+rm -rf timesRanki/*.dat timesRanki/*.png
+rm -rf material/*.dat material/*.png
+rm -rf TFwNL/*.png TFwNL/*.dat
+rm -rf TFKW/*.png TFKW/*.dat TFKW/*.data
+rm -rf TFKWSLG/*.png TFKWSLG/*.dat TFKWSLG/*.data
+

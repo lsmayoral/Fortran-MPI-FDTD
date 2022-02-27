@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+
+gnuplot -persist<< EOF
+reset
+
+#set terminal postscript eps enhanced size 8.5cm,6cm color font "Times,20" linewidth 10
+#set term png
+#set output "frame$1.png"
+
+set xlabel "y" 
+set ylabel "fld"
+
+#set xtics 5
+#set ytics 1
+
+jj=$1
+
+set title "frame=$1"
+set g
+set yrange[:]
+#set xtics add('s' 37,'SiO' 80,'Si' 85,'' 105,'' 125)
+plot for [i=0:0:1]'r'.i.'E_time'.jj.'.dat' u 1:2 w l lt 1 lw 3 title ""
+
+EOF
+

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+gnuplot -persist<< EOF
+reset
+
+#set terminal postscript eps enhanced size 8.5cm,6cm color font "Times,20" linewidth 10
+#set terminal png large size 1600,720 enhanced
+set term qt 1
+set xlabel "wavelength(nm)" 
+#set ylabel "pos. x(nm)" 
+
+set title "2D real[Ex]real[Hz]"
+amp=1.1e-30
+set title "2D img[Ex]img[Hz]"
+
+#set pm3d map
+set g
+set view 90,360
+splot [:][:][:]\\
+"r0tf_r.dat" u 1:2:(\$3/amp) w pm3d notitle
+
+set term qt 2
+set title "2D img[Ex]img[Hz]"
+splot [:][:][:]\\
+"r0tf_r.dat" u 1:2:(\$4/amp) w pm3d notitle
+
+EOF
+

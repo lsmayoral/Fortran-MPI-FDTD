@@ -1,0 +1,30 @@
+#!/bin/sh
+#SBATCH --job-name=H2O_Si     # Job name
+#SBATCH --nodes=1
+# SBATCH -w,--nodelist=ibnodo[17-25]
+#SBATCH --ntasks-per-node=5       # How many tasks on each node
+# SBATCH --ntasks-per-node=1        # How many tasks on each node
+#  SBATCH --ntasks-per-socket=6        # How many tasks on each CPU or socket
+# SBATCH --partition=general
+#SBATCH --time=00:30:00              # Time limit hrs:min:sec
+#SBATCH --output=out.out     # Standard output and error log
+#SBATCH --error=error.out     # Standard output and error log
+# SBATCH --constraint=broadwell
+#SBATCH --account=def-berini
+# SBATCH --mem=10G 
+#SBATCH --mail-user=lmayoral@uottawa.ca
+# SBATCH --mail-type=BEGIN
+# SBATCH --mail-type=END
+# SBATCH --mail-type=FAIL
+# SBATCH --mail-type=REQUEUE
+# SBATCH --mail-type=ALL
+pwd; hostname; date
+cd $SLURM_SUBMIT_DIR
+
+module load intel/2018.2
+module load intelmpi/2018.2
+date
+#time srun ./program
+time mpirun ./program
+
+

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+modDir=FoXy/exe/mod
+objDir=FoXy/exe/obj
+
+rm -rf $modDir/add_attributes.o
+rm -rf $modDir/add_tag.o
+rm -rf $modDir/create_tag.o
+rm -rf $modDir/delete_attributes.o
+rm -rf $modDir/delete_content.o
+rm -rf $modDir/delete_tag.o
+rm -rf $modDir/indent_tag.o
+rm -rf $modDir/parse_file_simple.o
+rm -rf $modDir/parse_string_simple.o
+rm -rf $modDir/write_tag.o
+
+rm -rf $objDir/add_attributes.o
+rm -rf $objDir/add_tag.o
+rm -rf $objDir/create_tag.o
+rm -rf $objDir/delete_attributes.o
+rm -rf $objDir/delete_content.o
+rm -rf $objDir/delete_tag.o
+rm -rf $objDir/indent_tag.o
+rm -rf $objDir/parse_file_simple.o
+rm -rf $objDir/parse_string_simple.o
+rm -rf $objDir/write_tag.o

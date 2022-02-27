@@ -1,0 +1,76 @@
+src/lib/foxy_xml_tag.F90:4:4:
+
+    4 | use penf
+      |    1
+Fatal Error: Cannot open module file 'penf.mod' for reading at (1): No such file or directory
+compilation terminated.
+src/lib/foxy_xml_file.f90:34:27:
+
+   34 |   pure function get_Nt(self) result(n)
+      |                           1
+Error: Argument 'self' of pure function 'get_nt' at (1) must be INTENT(IN) or VALUE
+src/lib/foxy_xml_file.f90:37:8:
+
+   37 |     n=Nt
+      |        1
+Error: Symbol 'nt' at (1) has no IMPLICIT type; did you mean 'n'?
+src/lib/foxy_xml_file.f90:37:8:
+
+   37 |     n=Nt
+      |        1
+Error: Symbol 'nt' at (1) has no IMPLICIT type; did you mean 'n'?
+src/lib/foxy_xml_file.f90:120:40:
+
+  120 |   elemental subroutine add_tag(self, tag)
+      |                                        1
+Error: Symbol 'tag' at (1) has no IMPLICIT type
+src/lib/foxy_xml_file.f90:120:40:
+
+  120 |   elemental subroutine add_tag(self, tag)
+      |                                        1
+Error: Argument 'tag' of pure subroutine 'add_tag' at (1) must have its INTENT specified or have the VALUE attribute
+src/lib/foxy_xml_file.f90:120:40:
+
+  120 |   elemental subroutine add_tag(self, tag)
+      |                                        1
+Error: Argument 'tag' of elemental procedure 'add_tag' at (1) must have its INTENT specified or have the VALUE attribute
+src/lib/foxy_xml_file.f90:180:47:
+
+  180 |     if (tag%is_parsed()) call self%add_tag(tag)
+      |                                               1
+Error: Type mismatch in argument 'tag' at (1); passed TYPE(xml_tag) to UNKNOWN
+src/lib/foxy_xml_file.f90:43:17:
+
+   43 |         allocate(tags(1:self%Nt))
+      |                 1
+Error: Allocate-object at (1) must be ALLOCATABLE or a POINTER
+src/lib/foxy_xml_file.f90:119:40:
+
+  119 |   elemental subroutine add_tag(self, tag)
+      |                                        1
+Error: Symbol 'tag' at (1) has no IMPLICIT type
+src/lib/foxy_xml_file.f90:119:40:
+
+  119 |   elemental subroutine add_tag(self, tag)
+      |                                        1
+Error: Argument 'tag' of pure subroutine 'add_tag' at (1) must have its INTENT specified or have the VALUE attribute
+src/lib/foxy_xml_file.f90:119:40:
+
+  119 |   elemental subroutine add_tag(self, tag)
+      |                                        1
+Error: Argument 'tag' of elemental procedure 'add_tag' at (1) must have its INTENT specified or have the VALUE attribute
+src/lib/foxy_xml_file.f90:179:47:
+
+  179 |     if (tag%is_parsed()) call self%add_tag(tag)
+      |                                               1
+Error: Type mismatch in argument 'tag' at (1); passed TYPE(xml_tag) to UNKNOWN
+src/lib/foxy_xml_file.f90:53:17:
+
+   53 |         allocate(tags(1:self%Nt))
+      |                 1
+Error: Allocate-object at (1) must be ALLOCATABLE or a POINTER
+src/lib/foxy_xml_file.f90:53:17:
+
+   53 |         allocate(tags(1:self%Nt))
+      |                 1
+Error: Allocate-object at (1) must be ALLOCATABLE or a POINTER

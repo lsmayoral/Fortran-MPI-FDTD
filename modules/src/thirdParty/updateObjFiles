@@ -1,0 +1,8 @@
+#!/bin/bash
+dest=../../obj/thirdParty/
+
+cp ./Lib_VTK_IO/static/mod/*.mod $dest/VTK
+cp ./Lib_VTK_IO/static/obj/*.o $dest/VTK
+cp ./FoXy/exe/mod/*.mod $dest/Foxy
+cp ./FoXy/exe/obj/*.o $dest/Foxy
+

@@ -1,0 +1,15 @@
+echo "*************************"
+wc -l transforms/r$1tfld.dat
+grep Nt= out.out
+echo "*************************"
+
+total=$(grep Nt= out.out|cut -f1)
+lines=$(wc -l transforms/r$1tfld.dat| tr " " "\n ")
+linesnum=$(echo $lines| cut -f1 -d\n|tr -dc '0-9')
+totalnum=$(echo $total|tr -dc '0-9')
+
+#echo ">>total=$totalnum<<"
+#echo ">>avance=$linesnum<<"
+
+adv=$((100*linesnum/totalnum))
+echo "adv=$adv%"

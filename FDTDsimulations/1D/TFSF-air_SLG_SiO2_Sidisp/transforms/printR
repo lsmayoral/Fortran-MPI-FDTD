@@ -1,0 +1,14 @@
+#!/bin/bash
+
+gnuplot -persist<< EOF
+reset
+
+set xlabel "wavelength (nm)" 
+
+set ylabel "Reflectance" 
+plot [:][$1:$2]\\
+"R_1Dfdtd.data" u 1:(-\$2) w l title "Syr/Syi"
+
+EOF
+
+

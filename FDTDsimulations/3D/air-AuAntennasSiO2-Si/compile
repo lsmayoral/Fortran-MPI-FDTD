@@ -1,0 +1,37 @@
+#!/bin/bash
+#sh clear.sh 40
+
+FC=mpifort
+program=program
+exe=run$program
+
+rm -rf $exe
+sleep 2
+
+check="-fcheck=all"
+#archSec="-mcmodel=large -shared-intel"
+
+moddir=/home/lmayoral/programs/ACRuO/modules/current/modules/obj
+mod3D=$moddir/3D
+modmisc=$moddir/misc
+thirdParty=$moddir/thirdParty
+VTK=$thirdParty/VTK
+Foxy=$thirdParty/Foxy
+
+includes="-I$mod3D -I$modmisc"
+
+#modmiscFiles=`ls $modmisc/*.o`
+#mod3DFiles=`ls $mod3D/*.o`
+#thirdPartyFiles=`ls $thirdParty/*.o`
+
+modmiscFiles=$modmisc/*.o
+mod3DFiles=$mod3D/*.o
+#VTKfiles=$VTK/*.o
+#Foxyfiles=$Foxy/*.o
+
+modfiles="$modmiscFiles $mod3DFiles $VTKfiles $Foxyfiles"
+
+$FC $check $archSec -c $program.f90 $includes
+$FC $check $archSec -o $exe program.o $modfiles
+echo "src=$program.f90"
+echo "exe=$exe"

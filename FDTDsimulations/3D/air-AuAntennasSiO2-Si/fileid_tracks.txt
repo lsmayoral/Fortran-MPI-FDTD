@@ -1,0 +1,10 @@
+
+2->transforms/infld.dat
+3->transforms/rfld.dat
+4->transforms/tfld.dat
+400+frame->timesLiney/frame.dat
+500+frame->timesGnumap/frame.dat
+10->transforms/Syin.dat
+11->transforms/Syr.dat
+12->transforms/Syt.dat
+100+frame->timesVTK/frame.dat

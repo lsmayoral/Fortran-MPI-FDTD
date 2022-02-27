@@ -1,0 +1,4 @@
+date
+time mpirun --hostfile hostfile -np 6 runprogram > out.out
+date
+(speaker-test -t sine -f 1000 )& pid=$! ; sleep 0.2s ; kill -9 $pid

@@ -1,0 +1,102 @@
+<h1>module: foxy</h1>
+<ul>
+	<li><h2>type, public:: xml_file</h2></li>
+	<table border=1 width=100%>
+<tr>
+<td colspan="2" align="center">public methods</td>
+</tr>
+<tr>
+<td width=50%>procedure :: free.</td>
+<td><b>Free dynamic memory.</b></td>
+</tr>
+<tr>
+<td>procedure :: parse.</td>
+<td><b> Parse xml data from string or file.</b></td>
+</tr>
+<tr>
+<td>procedure :: content.</td>
+<td><b>Return tag content of tag named *name*.</b></td>
+</tr>
+<tr>
+<td>procedure :: stringify.</td>
+<td><b>Convert the whole file data into a string.</b></td>
+</tr>
+<tr>
+<td>procedure :: add_tag.</td>
+<td><b>Add tag to XML file.</b></td>
+</tr>
+<tr>
+<td>procedure :: delete_tag.</td>
+<td><b>Add tag from XML file.</b></td>
+</tr>
+<tr>
+<td>final     :: finalize.</td>
+<td><b>Free dynamic memory when finalizing</b></td>
+</tr>
+</table>
+
+
+
+<li><h2>type :: xml_tag</h2>
+	<table border=1 width=100%>
+<tr>
+<td colspan="2" align="center">public methods</td>
+</tr>
+<tr>
+<td width=50%>generic   :: add_attributes => add_single_attribute, add_multiple_attributes, add_stream_attributes.</td>
+<td><b>Add attributes name/value pairs.</b></td>
+</tr>
+<tr>
+<td>procedure :: attributes</td>
+<td><b>Return attributes name/value pairs as string.</b></td>
+</tr>
+<tr>
+<td>procedure :: get_content</td>
+<td><b>Return tag content.</b></td>
+</tr>
+<tr>
+<td>generic   :: delete_attributes => delete_single_attribute, delete_multiple_attributes.</td>
+<td><b>Delete attributes name/value pairs.</b></td>
+</tr>
+<tr>
+<td>procedure :: delete_content</td>
+<td><b>Delete tag conent.</b></td>
+<tr>
+<td>procedure :: end_tag</td>
+<td><b>Return `</tag_name>` end tag.</b></td>
+</tr>
+<tr>
+<td>procedure :: free</td>
+<td><b>Free dynamic memory.</b></td>
+<tr>
+<td>procedure :: is_attribute_present</td>
+<td><b>Return .true. it the queried a ttribute name is defined.</b></td>
+<tr>
+<td>procedure :: is_parsed</td>
+<td><b>Check is tag is correctly pars ed, i.e. its *tag_name* is allocated.</b></td>
+<tr>
+<td>procedure :: name</td>
+<td><b>Return tag name.</b></td>
+<tr>
+<td>procedure :: parse</td>
+<td><b>Parse the tag contained into a  source string.</b></td>
+<tr>
+<td>procedure :: self_closing_tag</td>
+<td><b>Return `<tag_name.../>` self closing tag.</b></td>
+<tr>
+<td>procedure :: set</td>
+<td><b>Set tag data.</b></td>
+<tr>
+<td>procedure :: start_tag</td>
+<td><b>Return `<tag_name...>` start tag.</b></td>
+<tr>
+<td>procedure :: stringify</td>
+<td><b>Convert the whole tag into a string.</b></td>
+<tr>
+<td>generic   :: assignment(=) => assign_tag</td>
+<td><b>Assignment operator overloading.</b></td>
+<tr>
+<td>procedure :: write => write_tag</td>
+<td><b>Write tag to unit file.</b></td>
+</table>
+	

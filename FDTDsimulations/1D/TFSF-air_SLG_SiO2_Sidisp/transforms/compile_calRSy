@@ -1,0 +1,20 @@
+#!/bin/bash
+#compiler name
+FC=mpifort
+#source file name (.f90 ext omitted)
+program=calR_Sy
+#generated name for executable program
+exe=run$program
+
+moddir=/home/lmayoral/programs/ACRuO/modules/current/modules/obj/thirdParty/Foxy
+#moddir=path-to-modules/modules/current/modules/obj/thirdParty/Foxy
+modfilesext=$moddir/*.o
+modfiles=`ls $modfilesext`
+
+$FC $check -c $program.f90 -I$moddir
+$FC $check -o $exe $program.o $modfiles
+
+
+
+
+

@@ -1,0 +1,28 @@
+#!/bin/bash
+#sh clear.sh 40
+#check="-fcheck=all"
+
+FC=mpifort
+dest="../../obj/2D/"
+srcFiles=($(ls *.f90))
+
+inc="-I../../obj/misc/"
+
+############################
+#outputDirective for mpifort(intel)
+############################
+#OD="-module"
+############################
+#outputDirective for mpifort(GNU)
+############################
+OD="-J"
+############################
+
+for srcfile in "${srcFiles[@]}" ;do
+#    $FC $check -c $srcfile $OD $dest 
+    $FC $check $OD $dest -o $dest${srcfile%.*}.o  -c $srcfile $inc
+#    echo "-c $srcfile"
+done
+
+
+

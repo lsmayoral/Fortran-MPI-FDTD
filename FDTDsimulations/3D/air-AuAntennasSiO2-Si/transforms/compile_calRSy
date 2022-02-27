@@ -1,0 +1,22 @@
+#!/bin/bash
+#sh clear.sh 40
+#check="-fcheck=all"
+FC=mpifort
+program=calR_Sy
+exe=run$program
+
+moddir=/home/lmayoral/programs/ACRuO/modules/current/modules/obj/thirdParty/Foxy
+modfilesext=$moddir/*.o
+modfiles=`ls $modfilesext`
+
+#thirdParty=/home/b/berini/lmayoral/programs/modules/ThirdParty
+#thirdfilesext=$thirdParty/*.o
+#thirdPartyfiles=`ls $thirdfilesext`
+
+$FC $check -c $program.f90 -I$moddir
+$FC $check -o $exe $program.o $modfiles
+
+
+
+
+

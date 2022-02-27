@@ -1,0 +1,123 @@
+module: foxy
+	type, public:: xml_file
+	! public methods
+		subroutine :: free()			!< Free dynamic memory.
+
+    		subroutine :: parse(string, filename)
+				self(inout): XML file class
+				string(in): String containing xml data.
+				filename(in): File name containing xml data
+		Parse xml data from string or file.
+		Note Self data are free before trying to parse new xml data: all previously parsed data are lost.
+					
+    		function :: content(name) result(string)
+				name(in): Tag name
+		Return tag content of tag named *name*.
+		Note If there is no value, the *tag_content* string is returned empty, but allocated.
+
+    		function :: stringify() result(string)
+		Convert the whole file data into a string.
+
+    		subroutine :: add_tag(tag)
+				self(inout): XML file class
+				tag(in): XML tag
+		Add tag to XML file.
+
+    		subroutine :: delete_tag(tag)
+				self(inout): XML file class
+				tag(in): XML tag
+		Add tag from XML file.
+
+    		subroutine     :: finalize()
+		Free dynamic memory when finalizing
+
+
+	type :: xml_tag
+	! public methods
+    		function :: attributes() result(att)    !< Return attributes name/value pairs as string.
+				att !< The attribute string
+
+    		subroutine :: get_content(name,content)
+				name(in)	!< Searched tag name
+				content(out)	!< Tag content
+		Return tag content. If there is no value, the *content* string is returned deallocated.
+		
+    		subroutine :: delete_content()              !< Delete tag conent.
+				self: XML tag
+ 
+   		function :: end_tag(is_indented) result(tag)      !< Return `</tag_name>` end tag.
+				is_indented !< Activate content indentation
+				tag	    !< The end tag string
+
+    		subroutine :: free()                        !< Free dynamic memory.
+
+    		function :: is_attribute_present(name) result(logical)
+				name: Attribute name
+       	!< Return .true. it the queried a ttribute name is defined.
+
+    		function :: is_parsed() result(logical)
+		!< Check is tag is correctly pars ed, i.e. its *tag_name* is allocated.
+
+
+    		function :: name() result(tag)
+				tag !< XML tag name
+                        !< Return tag name.
+
+    		subroutine :: parse(source,tstart,tend)
+				source(in)  !< String containing the input.
+				tstart (optional, inout)  !< Starting index of tag inside the string.
+				tend (optional, inout)	!< Ending index of tag inside the string
+		!< Parse the tag contained into a  source string.
+		!< It is assumed that the first tag contained into the source string is parsed, the others eventually present are omitted.
+		!< Valid syntax are:
+		!< + `<tag_name att1="att1 val" att2="att2 val"...>...</tag_name>`
+		!< + `<tag_name att1="att1 val" att2="att2 val".../>`
+		!< @note Inside the attributes value the symbols `<` and `>` are not allowed.
+
+    		function :: self_closing_tag(is_indented) result(tag)
+				tag: The self closing tag string.
+				is_indented (optional, in): Flag to check if tag is indented.
+		!< Return `<tag_name.../>` self closing tag.
+
+    		subroutine :: set(name, attribute, attributes, attributes_stream, sanitize_attributes_value, content, indent, is_content_indented, is_self_closing)
+				name(optional, in): Tag name
+				attribute(optional, in): Attribute name/value pair
+				attributes(optional, in): Attribute list of names/value pairs as [1:2,1:]
+				attributes_stream(optional, in): Attribute list of names/value pairs as single stream
+				sanitize_attributes_value(optional, in): Sanitize attribute value.
+				content(optional, in): Tag value
+				indent(optional, in): Number of indent-white-spaces.
+				is_content_indented(optional, in): Activate value.
+				is_self_closing(optional, in): The tag is self closing.
+                        !< Set tag data.
+
+    		function :: start_tag(is_indented) result(tag)
+				tag(out): The start tag string
+				is_indented(optional, in): Flag to check if tag is indented
+                   !< Return `<tag_name...>` start tag.
+
+    		function :: stringify(is_indented, only_start, only_content, only_end) result(stringed)
+				stringed:  Output string containing the whole tag.
+				is_indented(optional, in): Activate content indentation
+				only_start(optional, in): Write only start tag.
+				only_content(optional, in): Write only content.
+				only_end(optional, in): Write only end tag
+                   !< Convert the whole tag into a string.
+
+    		procedure :: write => write_tag(unit, is_indented, is_content_indented, form, end_record, only_start, only_content, only_end,iostat, iomsg)
+				unit(in): File unit
+				is_indented(optional, in): Activate content indentation.
+				is_content_indented(optional, in): Activate content indentation.
+				form(optional, in): Format.
+				end_record(optional, in): Ending record.
+				only_start(optional, in): Write only start tag.
+				only_content(optional, in): Write only content.
+				only_end(optional, in): Write only end tag.
+				iostat(optional, in): IO status.
+				iomsg(optional, in): IO message.
+          !< Write tag to unit file.
+
+		subroutine :: assign_tag(lhs,rhs)
+			lhs(inout) :: Left hand side.
+			rhs(in) :: right hand side.
+		Assignment between two tags.
