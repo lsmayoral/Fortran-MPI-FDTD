@@ -5,7 +5,7 @@ FC=mpifort
 program=calR_Sy
 exe=run$program
 
-moddir=/home/lmayoral/programs/ACRuO/modules/current/modules/obj/thirdParty/Foxy
+moddir=../../../modules/obj/thirdParty/Foxy
 modfilesext=$moddir/*.o
 modfiles=`ls $modfilesext`
 

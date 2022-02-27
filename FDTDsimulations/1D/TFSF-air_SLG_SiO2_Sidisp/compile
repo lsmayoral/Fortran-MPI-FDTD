@@ -3,7 +3,7 @@
 FC=mpifort
 program=program
 exe=run$program
-moddir=/home/lmayoral/programs/ACRuO/modules/current/modules/obj
+moddir=../../../modules/obj
 mod1D=$moddir/1D
 modmisc=$moddir/misc
 

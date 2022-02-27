@@ -11,7 +11,7 @@ sleep 2
 check="-fcheck=all"
 #archSec="-mcmodel=large -shared-intel"
 
-moddir=/home/lmayoral/programs/ACRuO/modules/current/modules/obj
+moddir=../../../modules/obj
 mod3D=$moddir/3D
 modmisc=$moddir/misc
 thirdParty=$moddir/thirdParty
